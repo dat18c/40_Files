@@ -8,7 +8,7 @@ Fejlhåndtering - sikring mod file not found
 
 ## Øvelser
 
-Reges Ex. ... p...
+Reges Ex. stop før write p.461 - 462
 
 ## Movie Application
 Mangler I data? Så kig evt. på IMDB's offentlige data: https://www.imdb.com/interfaces/
