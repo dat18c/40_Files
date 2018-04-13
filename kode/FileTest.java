@@ -10,18 +10,20 @@ public class FileTest{
       //String fileName = console.nextLine();
       //Scanner input = new Scanner(new File(fileName));
       Scanner input = getInputScanner(console);
+      //Scanner input = new Scanner("Dat18v2 er gode!");
       System.out.println();
       String name;
       int count = 0;
       String newName = "";
       if (input.hasNext()){
          name = input.next();
-         System.out.print(name);
+         //System.out.print(name);
+         newName = name;
          count++;
          while (input.hasNext()){
             name = input.next();
             //System.out.print(" " + name);
-            newName += name;
+            newName += " " + name;
             count++;
          }
       }
@@ -39,6 +41,8 @@ public class FileTest{
          System.out.print("Angiv filnavn: ");
          f = new File(console.nextLine());
       }
+      System.out.println("Første dør åbnes for ældre!");
       return new Scanner(f);
+
    }
 }
