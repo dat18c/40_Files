@@ -29,7 +29,14 @@ public class FileTest{
       }
       System.out.println(newName);
       System.out.println("Der er " + count + " ord");
+   
+      PrintStream output = new PrintStream(new File("DT2.txt"));
+      output.println(newName);
+      output.println("Der er " + count + " ord");
+      System.out.println("Det er også skrevet til fil.");
       
+      //average value file
+      averageFile();
    }
    
    public static Scanner getInputScanner(Scanner console) throws FileNotFoundException {
@@ -41,8 +48,23 @@ public class FileTest{
          System.out.print("Angiv filnavn: ");
          f = new File(console.nextLine());
       }
-      System.out.println("Første dør åbnes for ældre!");
       return new Scanner(f);
-
    }
+   
+   public static void averageFile() throws FileNotFoundException{
+      Scanner console = new Scanner(System.in);
+      Scanner input = getInputScanner(console);
+      double sum = 0; //sum af tal læst
+      int n = 0; //antal tal læst
+      while (input.hasNextDouble()){
+         sum += input.nextDouble();
+         n++;
+      }
+      PrintStream output = new PrintStream(new File("average.txt"));
+      output.printf("Der er %d tal\n", n);
+      output.printf("Summen er %4.2f\n", sum);
+      output.printf("Gennemsnitter er %4.2f\n", sum/n);
+      
+   }
+   
 }
