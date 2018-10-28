@@ -10,7 +10,7 @@ public class FileTest{
       //String fileName = console.nextLine();
       //Scanner input = new Scanner(new File(fileName));
       Scanner input = getInputScanner(console);
-      //Scanner input = new Scanner("Dat18v2 er gode!");
+      //Scanner input = new Scanner("Dat18c er gode!");
       System.out.println();
       String name;
       int count = 0;
