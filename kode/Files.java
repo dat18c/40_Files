@@ -13,17 +13,23 @@ public class Files{
       System.out.println("Filens længde: " + f.length());
       
       //brug fil-objektet som input-strøm
+      Scanner input = new Scanner(f);
       
       //initialiser sum
-
+      double sum = 0.0;
+      int antal = 0;
       //læs inputstrømmen så længe der er flere doubles
-      
+      while (input.hasNextDouble())
+      {
          //læs næste double
-         
          //læg det læste tal til sum
-         
+         sum += input.nextDouble();
+         //læg 1 til antal tal
+         antal ++;  
+      }  
       //udskriv sum
-      
+      System.out.printf("Sum: %.2f%n", sum);
+      System.out.printf("Gennemsnit: %.2f%n", sum/antal);
    }
 
 }
