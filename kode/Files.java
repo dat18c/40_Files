@@ -22,13 +22,18 @@ public class Files{
       while (input.hasNextDouble())
       {
          //læs næste double
+         double tal = input.nextDouble();
+         System.out.println("Jeg har læst: " + tal);
+         
          //læg det læste tal til sum
-         sum += input.nextDouble();
+         sum += tal;
          //læg 1 til antal tal
          antal ++;  
       }  
       //udskriv sum
-      System.out.printf("Sum: %.2f%n", sum);
+      System.out.println("Sum: " + sum);
+      System.out.printf("Sum: %.1f%n", sum);
+      System.out.println("Gennemsnit: " + sum/antal);
       System.out.printf("Gennemsnit: %.2f%n", sum/antal);
    }
 
